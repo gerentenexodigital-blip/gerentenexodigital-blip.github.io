@@ -274,7 +274,6 @@ footer small{display:block;margin-top:8px;opacity:.7}
   <span class="k">Catálogo</span>
   <h2 class="t">Escoge tus <span>sabores</span></h2>
   <p class="lead">Toca + o escribe la cantidad. Al final te queda el pedido armado para enviarlo por WhatsApp.</p>
-  <div class="combo"><b>👑 ¡Arma tu combo!</b> Mezcla los sabores que quieras: <b>desde 30 bolis en total, cada uno te queda a $2.000.</b><small>Ej.: 10 de chocolate + 10 de mora + 10 de coco = 30 bolis a $2.000 c/u 🎉</small></div>
   <div class="tabs" id="tabs"></div>
   <div class="grid" id="grid"></div>
  </div>
@@ -323,7 +322,7 @@ footer small{display:block;margin-top:8px;opacity:.7}
  <div class="wrap">
   <h2>¿Se te antojó? 👑</h2>
   <p>Escríbenos y te los llevamos el fin de semana.</p>
-  <div class="ctas"><a class="btn btn-wa" id="ctaWa" target="_blank" rel="noopener">WhatsApp 319 467 4777</a><a class="btn btn-w" href="https://www.tiktok.com/@leidylorenagalleg3" target="_blank" rel="noopener">Síguenos en TikTok</a></div>
+  <div class="ctas"><a class="btn btn-wa" id="ctaWa" target="_blank" rel="noopener">WhatsApp 319 467 4777</a><a class="btn btn-w" href="https://www.tiktok.com/search?q=bolis%20rey" target="_blank" rel="noopener">Síguenos en TikTok</a></div>
  </div>
 </section>
 
@@ -385,7 +384,7 @@ function sum(){
  const e=Object.entries(cart),n=e.reduce((a,[,q])=>a+q,0),may=n>=MAY_MIN,tot=e.reduce((a,[id,q])=>a+q*unit(n,id),0);
  $("list").innerHTML=e.length?e.map(([id,q])=>`<li><span>${q} × ${S[id][1]}</span><span>${fmt(q*unit(n,id))}</span></li>`).join("")+`<li class="sub"><span>${n} ${n===1?"boli":"bolis"}</span></li>`+(may?`<li class="may ok">🎉 ¡Precio mayorista! Desde ${MAY_MIN} bolis cada uno te queda a ${fmt(MAY_PRECIO)}</li>`:`<li class="may">💡 Lleva ${MAY_MIN} o más y cada boli te queda a ${fmt(MAY_PRECIO)}. Te faltan ${MAY_MIN-n}.</li>`)+`<li class="tot"><span>Total</span><span>${fmt(tot)}</span></li><li class="empty">🛵 Nota: el domicilio tiene costo (solo en Cali). El valor te lo confirmamos por WhatsApp.</li>`:'<li class="empty">Aún no has escogido sabores. Toca + en los que quieras 👆</li>';
  const ns=e.length;$("cc").textContent=n+(n===1?" boli":" bolis")+(ns>1?` (${ns} sabores)`:"")+" · "+fmt(tot);$("ct").textContent="";
- {const pr=$("cprog"),f=MAY_MIN-n;pr.textContent=n>=MAY_MIN?`🎉 ¡Precio mayorista activado! Todos tus bolis a ${fmt(MAY_PRECIO)}`:`🔥 Te faltan ${f} para pagarlos a ${fmt(MAY_PRECIO)} c/u`;pr.classList.toggle("ok",n>=MAY_MIN)}$("cartbar").classList.toggle("show",n>0);
+ {const pr=$("cprog"),f=MAY_MIN-n;pr.textContent=n>=MAY_MIN?`🎉 ¡Precio mayorista activado! Todos tus bolis a ${fmt(MAY_PRECIO)}`:`🔥 Te faltan ${f} para llevarlos a ${fmt(MAY_PRECIO)} c/u 👑 ¡Arma tu combo! Mezcla los sabores que quieras`;pr.classList.toggle("ok",n>=MAY_MIN)}$("cartbar").classList.toggle("show",n>0);
  return {e,n,tot,may}}
 
 // Entrega: domicilios solo sábados y domingos
