@@ -38,6 +38,14 @@
 .more-btn{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.4);color:#fff;font-weight:800;font-size:14px;border-radius:999px;padding:7px 16px;margin:4px 0 10px;cursor:pointer;font-family:inherit}
 .more-btn:hover{background:rgba(255,255,255,.25)}
 .foot-hist{display:inline-block;margin-left:8px;color:var(--yel);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.cartbar .btn{white-space:nowrap;flex:none;padding:10px 14px!important;font-size:14px!important}
+.cartbar b#cc{font-size:15px;line-height:1.25;display:block}
+.cartbar small.prog{color:var(--yel);font-weight:800;font-size:12.5px;margin-top:2px}
+.cartbar small.prog.ok{color:#5eea9a}
+.cartbar small#ct:empty{display:none}
+.combo{background:#fff;border:2.5px dashed var(--mag);border-radius:16px;padding:12px 16px;margin:4px 0 16px;font-size:15.5px;line-height:1.45;color:var(--ink);max-width:760px}
+.combo small{display:block;margin-top:4px;color:var(--muted);font-size:13.5px;font-weight:600}
+.foot-tt{color:inherit;text-decoration:underline;text-underline-offset:3px}
 </style>
 <style>
 :root{--pur:#5b1fa8;--pur2:#3d1278;--mag:#e5177e;--ora:#ff8a00;--yel:#ffd23f;--cream:#fff7ec;--ink:#24123f;--muted:#6f5d86;--line:#eadff5;--wa:#25d366}
@@ -266,6 +274,7 @@ footer small{display:block;margin-top:8px;opacity:.7}
   <span class="k">Catálogo</span>
   <h2 class="t">Escoge tus <span>sabores</span></h2>
   <p class="lead">Toca + o escribe la cantidad. Al final te queda el pedido armado para enviarlo por WhatsApp.</p>
+  <div class="combo"><b>👑 ¡Arma tu combo!</b> Mezcla los sabores que quieras: <b>desde 30 bolis en total, cada uno te queda a $2.000.</b><small>Ej.: 10 de chocolate + 10 de mora + 10 de coco = 30 bolis a $2.000 c/u 🎉</small></div>
   <div class="tabs" id="tabs"></div>
   <div class="grid" id="grid"></div>
  </div>
@@ -275,6 +284,7 @@ footer small{display:block;margin-top:8px;opacity:.7}
  <div class="wrap">
   <span class="k">Tu pedido</span>
   <h2 class="t">Listo para <span>enviar</span></h2>
+  <div class="pnote"><b>📅</b><span>Pedidos mayoristas y para eventos: realízalos con <b>5 a 8 días hábiles</b> de anticipación.</span></div>
   <div class="ped">
    <div class="box"><h3>🧾 Resumen</h3><ul id="list"></ul></div>
    <form class="box" id="form" autocomplete="on">
@@ -313,16 +323,16 @@ footer small{display:block;margin-top:8px;opacity:.7}
  <div class="wrap">
   <h2>¿Se te antojó? 👑</h2>
   <p>Escríbenos y te los llevamos el fin de semana.</p>
-  <div class="ctas"><a class="btn btn-wa" id="ctaWa" target="_blank" rel="noopener">WhatsApp 319 467 4777</a><a class="btn btn-w" href="https://www.tiktok.com/search?q=bolis%20rey" target="_blank" rel="noopener">Síguenos en TikTok</a></div>
+  <div class="ctas"><a class="btn btn-wa" id="ctaWa" target="_blank" rel="noopener">WhatsApp 319 467 4777</a><a class="btn btn-w" href="https://www.tiktok.com/@leidylorenagalleg3" target="_blank" rel="noopener">Síguenos en TikTok</a></div>
  </div>
 </section>
 
-<footer><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="10" fill="#FCD116"/><rect y="10" width="30" height="5" fill="#003893"/><rect y="15" width="30" height="5" fill="#CE1126"/></svg><b>Bolis Rey</b> · Cali, Colombia · WhatsApp 319 467 4777 · TikTok @bolis rey<a href="#quienes" class="foot-hist" id="footHist">Conoce nuestra historia</a><nav class="legal-links" aria-label="Información legal"><a href="#privacidad" data-legal="privacidad">Política de datos personales</a><a href="#terminos" data-legal="terminos">Términos y condiciones</a><a href="#cookies" data-legal="cookies">Política de cookies</a><a href="#devoluciones" data-legal="devoluciones">Cambios y reembolsos</a><a href="#accesibilidad" data-legal="accesibilidad">Accesibilidad</a></nav><small>Página hecha por Nexo Digital · @nexodigital_col</small></footer>
+<footer><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="10" fill="#FCD116"/><rect y="10" width="30" height="5" fill="#003893"/><rect y="15" width="30" height="5" fill="#CE1126"/></svg><b>Bolis Rey</b> · Cali, Colombia · WhatsApp 319 467 4777 · <a href="https://www.tiktok.com/@leidylorenagalleg3" target="_blank" rel="noopener" class="foot-tt">TikTok @leidylorenagalleg3</a><a href="#quienes" class="foot-hist" id="footHist">Conoce nuestra historia</a><nav class="legal-links" aria-label="Información legal"><a href="#privacidad" data-legal="privacidad">Política de datos personales</a><a href="#terminos" data-legal="terminos">Términos y condiciones</a><a href="#cookies" data-legal="cookies">Política de cookies</a><a href="#devoluciones" data-legal="devoluciones">Cambios y reembolsos</a><a href="#accesibilidad" data-legal="accesibilidad">Accesibilidad</a></nav><small>Página hecha por Nexo Digital · @nexodigital_col</small></footer>
 
 <svg width="0" height="0" style="position:absolute"><defs><symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></symbol></defs></svg>
 <div class="lg-modal" id="lgModal" role="dialog" aria-modal="true" aria-labelledby="lgTitle"><div class="lg-box"><div class="lg-head"><h2 id="lgTitle"></h2><button type="button" class="lg-close" id="lgClose" aria-label="Cerrar">×</button></div><div class="lg-body" id="lgBody" tabindex="0"></div></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite">¡Agregado! 👑</div>
-<div class="cartbar" id="cartbar"><div><b id="cc">0 bolis</b><small id="ct">$0</small></div><a href="#pedido" class="btn btn-m btn-sm">Ver pedido →</a></div>
+<div class="cartbar" id="cartbar"><div><b id="cc">0 bolis</b><small id="ct">$0</small><small class="prog" id="cprog"></small></div><a href="#pedido" class="btn btn-m btn-sm">Ver pedido →</a></div>
 <a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#wa"/></svg><span class="wa-tip" id="waTip" aria-hidden="true">¡Escríbenos aquí! 👋</span></a>
 
 <script>
@@ -374,7 +384,8 @@ const S=Object.fromEntries(SABORES.map(s=>[s[0],s]));
 function sum(){
  const e=Object.entries(cart),n=e.reduce((a,[,q])=>a+q,0),may=n>=MAY_MIN,tot=e.reduce((a,[id,q])=>a+q*unit(n,id),0);
  $("list").innerHTML=e.length?e.map(([id,q])=>`<li><span>${q} × ${S[id][1]}</span><span>${fmt(q*unit(n,id))}</span></li>`).join("")+`<li class="sub"><span>${n} ${n===1?"boli":"bolis"}</span></li>`+(may?`<li class="may ok">🎉 ¡Precio mayorista! Desde ${MAY_MIN} bolis cada uno te queda a ${fmt(MAY_PRECIO)}</li>`:`<li class="may">💡 Lleva ${MAY_MIN} o más y cada boli te queda a ${fmt(MAY_PRECIO)}. Te faltan ${MAY_MIN-n}.</li>`)+`<li class="tot"><span>Total</span><span>${fmt(tot)}</span></li><li class="empty">🛵 Nota: el domicilio tiene costo (solo en Cali). El valor te lo confirmamos por WhatsApp.</li>`:'<li class="empty">Aún no has escogido sabores. Toca + en los que quieras 👆</li>';
- $("cc").textContent=n+(n===1?" boli":" bolis");$("ct").textContent="Total: "+fmt(tot);$("cartbar").classList.toggle("show",n>0);
+ const ns=e.length;$("cc").textContent=n+(n===1?" boli":" bolis")+(ns>1?` (${ns} sabores)`:"")+" · "+fmt(tot);$("ct").textContent="";
+ {const pr=$("cprog"),f=MAY_MIN-n;pr.textContent=n>=MAY_MIN?`🎉 ¡Precio mayorista activado! Todos tus bolis a ${fmt(MAY_PRECIO)}`:`🔥 Te faltan ${f} para pagarlos a ${fmt(MAY_PRECIO)} c/u`;pr.classList.toggle("ok",n>=MAY_MIN)}$("cartbar").classList.toggle("show",n>0);
  return {e,n,tot,may}}
 
 // Entrega: domicilios solo sábados y domingos
